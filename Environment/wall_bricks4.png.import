@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxhtl2vkbepgd"
-path="res://.godot/imported/isobricks.png-cf88cafa681f28c96c7a86d272c63090.ctex"
+uid="uid://dse5i3hcrd3yr"
+path="res://.godot/imported/wall_bricks4.png-cee0ed8b181dc7c7003c5aabd27d0322.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Environment/isobricks.png"
-dest_files=["res://.godot/imported/isobricks.png-cf88cafa681f28c96c7a86d272c63090.ctex"]
+source_file="res://Environment/wall_bricks4.png"
+dest_files=["res://.godot/imported/wall_bricks4.png-cee0ed8b181dc7c7003c5aabd27d0322.ctex"]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://cbeqjvtwyt553"]
+[gd_scene load_steps=67 format=3 uid="uid://cbeqjvtwyt553"]
 
 [ext_resource type="Script" uid="uid://bwb3kl2x86bs0" path="res://Enemies/skeleton.gd" id="1_7itfo"]
 [ext_resource type="Texture2D" uid="uid://dxea6qomu6cge" path="res://Enemies/Skeleton_Sword/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Attack1.png" id="1_8i4wb"]
@@ -426,6 +426,9 @@ animations = [{
 "speed": 9.6
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7itfo"]
+size = Vector2(40, 38)
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_t1bvp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7itfo"]
@@ -438,7 +441,18 @@ script = ExtResource("1_7itfo")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(3, -28)
 sprite_frames = SubResource("SpriteFrames_pf54f")
-animation = &"Attack1"
+animation = &"Attack2"
+frame = 8
+frame_progress = 1.0
+
+[node name="Hitbox" type="Area2D" parent="AnimatedSprite2D"]
+position = Vector2(-3, 28)
+collision_layer = 16
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Hitbox"]
+position = Vector2(32, -23)
+shape = SubResource("RectangleShape2D_7itfo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_t1bvp")

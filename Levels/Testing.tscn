@@ -1,10 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://d1f2ssb1ntefx"]
+[gd_scene load_steps=6 format=3 uid="uid://d1f2ssb1ntefx"]
 
 [ext_resource type="PackedScene" uid="uid://cqae2cvjyy5et" path="res://DungeonGenerator/dungeon.tscn" id="1_ccpot"]
 [ext_resource type="PackedScene" uid="uid://dp3imjdge7c8q" path="res://Player/player.tscn" id="2_ahll1"]
+[ext_resource type="PackedScene" uid="uid://cbeqjvtwyt553" path="res://Enemies/skeleton.tscn" id="2_ccpot"]
+[ext_resource type="PackedScene" uid="uid://cys4wtmnkfuvu" path="res://keyboard.tscn" id="4_i6geh"]
+[ext_resource type="AudioStream" uid="uid://d5x4gto1a5y7" path="res://144BPM RR Combat.wav" id="5_b1ugb"]
 
 [node name="Testing" type="Node2D"]
 
 [node name="Dungeon" parent="." instance=ExtResource("1_ccpot")]
 
 [node name="Player" parent="." instance=ExtResource("2_ahll1")]
+
+[node name="Keyboard" parent="Player" instance=ExtResource("4_i6geh")]
+
+[node name="Camera2D2" type="Camera2D" parent="Player"]
+
+[node name="Skeleton" parent="." instance=ExtResource("2_ccpot")]
+position = Vector2(34, -210)
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_right = 4.0
+offset_bottom = 27.0
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_b1ugb")
+volume_db = -15.0
+autoplay = true

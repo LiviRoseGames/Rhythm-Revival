@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1f2ssb1ntefx"]
+
+[ext_resource type="PackedScene" uid="uid://cqae2cvjyy5et" path="res://DungeonGenerator/dungeon.tscn" id="1_ccpot"]
+[ext_resource type="PackedScene" uid="uid://dp3imjdge7c8q" path="res://Player/player.tscn" id="2_ahll1"]
+
+[node name="Testing" type="Node2D"]
+
+[node name="Dungeon" parent="." instance=ExtResource("1_ccpot")]
+
+[node name="Player" parent="." instance=ExtResource("2_ahll1")]
